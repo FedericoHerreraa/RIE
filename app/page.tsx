@@ -16,9 +16,9 @@ export default function Home() {
       </div>
       <Characteristics />
       <KnowUs />
-      <FAQs />
       <Plans />
       <Contact />
+      <FAQs />
     </>
   );
 }
