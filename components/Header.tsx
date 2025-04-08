@@ -1,18 +1,25 @@
-
+'use client'
 
 import { PiSunHorizon } from "react-icons/pi";
 
 
 export const Header = () => {
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     return (
         <div className="flex justify-between items-center px-20 py-5">
             <div>
-                <PiSunHorizon size={40} className="text-yellow-500"/>
+                <PiSunHorizon size={50} className="text-yellow-500"/>
             </div>
-            <div className="flex items-center gap-10">
-                <p className="text-zinc-700 cursor-pointer">La propuesta</p>
-                <p className="text-zinc-700 cursor-pointer">Quienes somos</p>
-                <p className="text-zinc-700 cursor-pointer">Planes</p>
+            <div className="flex items-center text-xl gap-10 text-zinc-700 cursor-pointer">
+                <p className="" onClick={() => scrollToSection('proposal')}>La propuesta</p>
+                <p className="" onClick={() => scrollToSection('knowus')}>Quienes somos</p>
+                <p className="" onClick={() => scrollToSection('plans')}>Planes</p>
             </div>
         </div>
     )
