@@ -1,8 +1,11 @@
 
-import { Caracteristics } from "@/components/Caracteristics";
+import { Characteristics } from "@/components/Characteristics";
 import { Header } from "@/components/Header";
 import { Landing } from "@/components/Landing";
 import { Plans } from "@/components/Plans";
+import { Contact } from "@/components/Contact";
+import { KnowUs } from "@/components/KnowUs";
+import { FAQs } from "@/components/FAQs";
 
 export default function Home() {
   return (
@@ -11,8 +14,11 @@ export default function Home() {
         <Header />
         <Landing />
       </div>
-      <Caracteristics />
+      <Characteristics />
+      <KnowUs />
+      <FAQs />
       <Plans />
+      <Contact />
     </>
   );
 }

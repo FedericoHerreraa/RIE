@@ -13,17 +13,12 @@ export const Landing = () => {
                     Comenzar ahora
                 </button>
             </div>
-            <div className="flex items-center justify-around mt-10 mx-auto w-[90%]">
-                <div className="w-1/2 flex flex-col items-center justify-center">
-                    <h2 className={`mb-7 text-6xl font-extralight text-zinc-900 `}>La propuesta</h2>
-                    <p className="text-center mx-20 text-zinc-500">En el contexto educativo actual, las instituciones requieren plataformas digitales que integren comunicación, organización y presentación institucional en un solo sitio web. Esta propuesta plantea el desarrollo de una plantilla web versátil, adaptable a distintas instituciones educativas (nivel inicial, primario y secundario), combinando funcionalidades de gestión académica y un sitio corporativo.</p>
+            <div className="flex items-center mt-10 gap-5 mx-auto w-[80%]">
+                <div className="w-1/4">
+                    <h2 className={`mb-2 text-5xl font-extralight text-zinc-900 `}>El problema</h2>
+                    <p className="mb-7 text-zinc-500">Nosotros te mostramos la solucion </p>
                 </div>
-                <div className="w-1/2">
-                    {/* <Image
-                        src={''}
-                        alt="landing"
-                    /> */}
-                </div>
+                <p className="w-3/4 text-center text-zinc-500">En el contexto educativo actual, las instituciones requieren plataformas digitales que integren comunicación, organización y presentación institucional en un solo sitio web. Esta propuesta plantea el desarrollo de una plataforma web versátil, adaptable a distintas instituciones educativas (nivel inicial, primario y secundario), combinando funcionalidades de gestión académica y un sitio corporativo.</p>
             </div>
         </section>
     )
