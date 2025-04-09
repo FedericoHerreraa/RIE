@@ -1,7 +1,9 @@
-
+'use client'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CiCircleCheck } from "react-icons/ci";
+import { scrollToSection } from "@/utils/functions";
+
 
 export const Plans = () => {
     return (
@@ -84,7 +86,7 @@ export const Plans = () => {
                 </section>
 
                 <div className="mt-10">
-                    <button className="bg-amber-300/50 border border-amber-500/50 cursor-pointer text-zinc-700 text-xl py-2 px-4 rounded-full hover:bg-amber-500/50 hover:scale-105 transition duration-300">
+                    <button onClick={() => scrollToSection('contact')} className="bg-amber-300/30 px-5 py-2 rounded-full cursor-pointer border border-amber-300/30 hover:border-amber-300 hover:scale-105 transition-all duration-300 text-zinc-700">
                         Quiero mi plan
                     </button>
                 </div>

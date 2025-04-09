@@ -1,16 +1,10 @@
 'use client'
 
+import { scrollToSection } from "@/utils/functions";
 import { PiSunHorizon } from "react-icons/pi";
 
 
 export const Header = () => {
-    const scrollToSection = (id: string) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
     return (
         <div className="flex justify-between items-center px-20 py-5">
             <div>
