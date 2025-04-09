@@ -7,6 +7,7 @@ import { Contact } from "@/components/Contact";
 import { KnowUs } from "@/components/KnowUs";
 import { FAQs } from "@/components/FAQs";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Contact />
       <FAQs />
       <Footer />
+      <BackToTop />
     </>
   );
 }
