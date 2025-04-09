@@ -31,9 +31,29 @@ export const Contact = () => {
         })
     }
 
+    const validateForm = () => {
+        if (!formState.nombre || !formState.asunto || !formState.email || !formState.mensaje) {
+            alert("Por favor, completa todos los campos.")
+            return false
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailPattern.test(formState.email)) {
+            alert("Por favor, ingresa un correo electrónico válido.")
+            return false
+        }
+
+        return true
+    }
+
     const onSubmit = async (email: boolean) => {
-        setLoading(true)
+        const res = validateForm()
+        if (!res) {
+            return
+        }
+
         if (email) {
+            setLoading(true)
             const response = await fetch('/api/send-contact-email', {
                 method: 'POST',
                 headers: {
@@ -45,6 +65,7 @@ export const Contact = () => {
             const result = await response.json();
             if (response.ok) {
                 setLoading(false)
+                alert('Email enviado correctamente')
             } else {
                 setLoading(false)
                 console.error('Error: ' + result.message);
@@ -60,9 +81,9 @@ export const Contact = () => {
 
     return (
         <div id="contact" className="h-fit w-full my-20 bg-zinc-100 py-20">
-            <h1 className="text-center font-extralight text-5xl">Contactanos ahora</h1>
+            <h1 className="text-center font-extralight md:text-5xl text-4xl">Contactanos ahora</h1>
 
-            <section className="w-[30%] mx-auto mt-16">
+            <section className="md:w-[30%] w-[85%] mx-auto mt-16">
                 <form className="flex flex-col gap-5">
                     <div>
                         <Input
@@ -102,7 +123,7 @@ export const Contact = () => {
                         Una vez confirmado, nuestro equipo te contestará por el medio elegido.
                     </p>
 
-                    <div className="flex items-center gap-7 justify-center mt-10">
+                    <div className="flex items-center gap-7 justify-center md:mt-10 mt-7">
                         <button
                             type="button"
                             onClick={() => onSubmit(false)}

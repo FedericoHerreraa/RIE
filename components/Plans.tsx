@@ -9,10 +9,10 @@ export const Plans = () => {
     return (
         <div
             id="plans"
-            className="bg-[url('/bg-plans.png')] bg-cover mt-20 w-screen h-[80vh]"
+            className="bg-[url('/bg-plans.png')] bg-cover mt-20 w-screen min-h-[80vh]"
         >
-            <div className="w-[80%] mx-auto">
-                <h1 className="font-extralight text-5xl">Nuestros Planes</h1>
+            <div className="md:w-[80%] w-[90%] mx-auto">
+                <h1 className="font-extralight md:text-5xl text-4xl">Nuestros Planes</h1>
 
                 <section className="mt-10 w-full mx-auto">
                     <Tabs defaultValue="advanced" className="w-full md:w-2/3">
@@ -21,67 +21,24 @@ export const Plans = () => {
                             <TabsTrigger value="advanced">Plan Avanzado</TabsTrigger>
                         </TabsList>
 
-                        <TabsContent value="base">
-                            <div className="shadow-lg p-10 rounded-lg bg-white">
-                                <h2 className="text-3xl font-light mb-2 text-zinc-700">Plan <span className="font-semibold">Base</span></h2>
-                                <p className="text-zinc-600 mb-4">Ideal para colegios que solo necesitan una presencia digital profesional.</p>
-                                <div className="space-y-2 text-zinc-600">
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Página web con información de la institución</p>
+                        {plans.map(plan => (
+                            <TabsContent key={plan.id} value={plan.value}>
+                                <div className="shadow-lg p-10 rounded-lg bg-white">
+                                    <h2 className='text-3xl font-light mb-2 text-zinc-700'>Plan <span className={`font-semibold ${plan.textColor}`}>{plan.name}</span></h2>
+                                    <p className="text-zinc-600 mb-4">{plan.description}</p>
+                                    <div className="space-y-2 text-zinc-600">
+                                        {plan.features.map((feature, index) => (
+                                            <div key={index} className="flex items-start gap-3">
+                                                <CiCircleCheck className="text-green-500 min-w-[20px] min-h-[20px]" />
+                                                <p className="text-base leading-snug">{feature}</p>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Galería de imágenes y videos</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Calendario de eventos y actividades</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Contacto con formulario y WhatsApp</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Descarga de documentos (inscripciones, reglamentos, etc.)</p>
-                                    </div>
+                                    <p className="text-zinc-800 font-medium mt-6">${plan.monthlyPrice.toLocaleString("es-AR")}/mes – ${plan.yearlyPrice.toLocaleString("es-AR")}/año</p>
+                                    <p className="mt-4 font-semibold">{plan.footer}</p>
                                 </div>
-                                <p className="text-zinc-800 font-medium mt-6">$150.000/mes – $1.500.000/año</p>
-                                <p className="mt-4 font-semibold">🚀 Pago anual con descuento</p>
-                            </div>
-                        </TabsContent>
-
-                        <TabsContent value="advanced">
-                            <div className="shadow-lg p-10 rounded-lg bg-white">
-                                <h2 className="text-3xl font-light mb-2 text-zinc-700">Plan <span className="bg-gradient-to-r text-transparent bg-clip-text from-pink-400 via-blue-300 to-violet-400 font-semibold">Avanzado</span></h2>
-                                <p className="text-zinc-600 mb-4">Para instituciones que quieren digitalizar procesos administrativos y mejorar la comunicación.</p>
-                                <div className="space-y-2 text-zinc-600">
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Todo lo del Plan Base +</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Perfiles para alumnos, docentes y familias</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Sistema de comunicación interna (notificaciones y blog)</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Generación de reportes (asistencia y calificaciones)</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CiCircleCheck size={20} className="text-green-500"/>
-                                        <p>Inscripción y gestión de documentos online</p>
-                                    </div>
-                                </div>
-                                <p className="text-zinc-800 font-medium mt-6">$350.000/mes – $3.800.000/año</p>
-                                <p className="mt-4 font-semibold">🚀 Pago mensual con opción de congelar precio por 12 meses</p>
-                            </div>
-                        </TabsContent>
+                            </TabsContent>
+                        ))}
                     </Tabs>
                 </section>
 
@@ -94,3 +51,45 @@ export const Plans = () => {
         </div>
     )
 }
+
+
+const plans = [
+    {
+        id: 1,
+        value: 'base',
+        name: 'Base',
+        description: 'Ideal para colegios que solo necesitan una presencia digital profesional.',
+        monthlyPrice: 150000,
+        yearlyPrice: 1500000,
+        features: [
+            'Página web con información de la institución',
+            'Galería de imágenes y videos',
+            'Calendario de eventos y actividades',
+            'Contacto con formulario y WhatsApp',
+            'Descarga de documentos (inscripciones, reglamentos, etc.)',
+            'Panel de control para gestionar la web',
+            'Disponibilidad 24/7 para cualquier modificacion en la plataforma',
+            'Hosting y dominio incluido',
+            'Mantenimiento web incluido',
+        ],
+        textColor: '',
+        footer: '🚀 Pago anual con descuento'
+    },
+    {
+        id: 2,
+        value: 'advanced',
+        name: 'Avanzado',
+        description: 'Para instituciones que quieren digitalizar procesos administrativos y mejorar la comunicación.',
+        monthlyPrice: 350000,
+        yearlyPrice: 3800000,
+        features: [
+            'TODO EL PLAN BASE +',
+            'Perfiles para alumnos, docentes y familias',
+            'Sistema de comunicación interna (notificaciones y blog)',
+            'Generación de reportes (asistencia y calificaciones)',
+            'Inscripción y gestión de documentos online'
+        ],
+        textColor: 'bg-gradient-to-r text-transparent bg-clip-text from-pink-400 via-blue-300 to-violet-400',
+        footer: '🚀 Pago mensual con opción de congelar precio por 12 meses'
+    }
+]

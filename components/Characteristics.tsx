@@ -8,22 +8,22 @@ export const Characteristics = () => {
     return (
         <section id="proposal" className="py-20 text-center min-h-[100vh] bg-zinc-100">
             <div className="mb-40">
-                <h1 className="text-5xl font-extralight mb-5 text-zinc-700">Descubri nuestras funcionalidades</h1>
-                <p className="text-zinc-500 text-lg">Tu institucion sera completamente distinta con <span className="font-bold bg-gradient-to-r text-transparent bg-clip-text from-pink-400 to-violet-400">RIE</span></p>
+                <h1 className="md:text-5xl text-4xl font-extralight mb-5 text-zinc-700">Descubri nuestras funcionalidades</h1>
+                <p className="text-zinc-500 md:text-lg mx-10">Tu institucion sera completamente distinta con <span className="font-bold bg-gradient-to-r text-transparent bg-clip-text from-pink-400 to-violet-400">RIE</span></p>
             </div>
 
             <section>
                 {info.map((item, index) => (
-                    <div key={index} className={`flex ${index%2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-10 mb-40 items-center justify-around mt-10 w-[80%] mx-auto`}>
-                        <div className={`w-1/2  ${index%2 === 0 ? 'text-start' : 'text-end'}`}>
+                    <div key={index} className={`flex ${index%2 === 0 ? 'md:flex-row flex-col' : 'md:flex-row-reverse flex-col'} gap-10 md:mb-40 mb-24 items-center justify-around mt-10 md:w-[80%] w-[90%] mx-auto`}>
+                        <div className={`md:w-1/2  ${index%2 === 0 ? 'md:text-start' : 'md:text-end'}`}>
                             <h2 className="text-3xl font-extralight mb-5 text-zinc-700">{item.title}</h2>
                             <p className="text-zinc-500">{item.description}</p>
-                            <div className={`mt-7 flex items-center ${index%2 !== 0 && 'flex-row-reverse justify-start'} gap-2 cursor-pointer text-zinc-700 font-semibold`}>
+                            <div className={`mt-7 flex items-center md:justify-start justify-center ${index%2 !== 0 && 'md:flex-row-reverse'} gap-2 cursor-pointer text-zinc-700 font-semibold`}>
                                 <p className={`transition-all duration-200 ${index%2 === 0 ? 'hover:mr-3' : 'hover:ml-3'}`}>Mas informacion</p>
-                                <FaArrowRightLong className={`${index%2 !== 0 && 'rotate-180'}`}/>
+                                <FaArrowRightLong className={`${index%2 !== 0 && 'md:rotate-180'}`}/>
                             </div>
                         </div>
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                             <Image
                                 src={imagePlatform}
                                 alt="Imagen de la plataforma"

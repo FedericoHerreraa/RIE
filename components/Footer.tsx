@@ -6,7 +6,7 @@ import asneedLogo from '@/public/asneedlogo.png'
 
 export const Footer = () => {
     return (
-        <footer className="bg-[url('/bg-footer2.png')] bg-cover h-[50vh]">
+        <footer className="bg-[url('/bg-footer2.png')] bg-cover min-h-[50vh]">
             <div className="flex flex-col items-center gap-2 mt-10 py-20">
                 <PiSunHorizon size={60} className="text-yellow-500"/>
                 <h1 className={`font-extralight text-8xl ${architects.className}`}>RIE</h1>

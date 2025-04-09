@@ -8,10 +8,10 @@ import {
 
 export const FAQs = () => {
     return (
-        <div className="min-h-[60vh] my-20">
-            <h1 className="text-center font-extralight text-5xl my-20">Preguntas <span className="bg-gradient-to-r text-transparent bg-clip-text from-red-500 to-orange-400 font-normal">Frecuentes</span></h1>
+        <div className="min-h-[60vh] md:my-20 my-10">
+            <h1 className="text-center font-extralight md:text-5xl text-4xl my-20">Preguntas <span className="bg-gradient-to-r text-transparent bg-clip-text from-red-500 to-orange-400 font-normal">Frecuentes</span></h1>
 
-            <section className="w-[40%] mx-auto">
+            <section className="md:w-[40%] w-[90%] mx-auto">
                 <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
                         <AccordionTrigger>¿Qué incluye el plan básico?</AccordionTrigger>
