@@ -4,7 +4,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CiCircleCheck } from "react-icons/ci";
 import { scrollToSection } from "@/utils/functions";
 
-
 export const Plans = () => {
     return (
         <div
@@ -68,7 +67,7 @@ const plans = [
             'Contacto con formulario y WhatsApp',
             'Descarga de documentos (inscripciones, reglamentos, etc.)',
             'Panel de control para gestionar la web',
-            'Disponibilidad 24/7 para cualquier modificacion en la plataforma',
+            'Disponibilidad 24/7 para cualquier modificación en la plataforma',
             'Hosting y dominio incluido',
             'Mantenimiento web incluido',
         ],

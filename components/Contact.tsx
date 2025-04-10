@@ -3,8 +3,8 @@
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
-import { ImSpinner3 } from "react-icons/im";
-
+import { ImSpinner3 } from "react-icons/im"
+import { toast } from "sonner"
 
 interface FormDTO {
     nombre: string
@@ -33,13 +33,13 @@ export const Contact = () => {
 
     const validateForm = () => {
         if (!formState.nombre || !formState.asunto || !formState.email || !formState.mensaje) {
-            alert("Por favor, completa todos los campos.")
+            toast("Por favor, completá todos los campos.")
             return false
         }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if (!emailPattern.test(formState.email)) {
-            alert("Por favor, ingresa un correo electrónico válido.")
+            toast("Por favor, ingresá un correo electrónico válido.")
             return false
         }
 
@@ -60,20 +60,20 @@ export const Contact = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formState),
-            });
-    
-            const result = await response.json();
+            })
+
+            const result = await response.json()
             if (response.ok) {
                 setLoading(false)
-                alert('Email enviado correctamente')
+                toast('E-mail enviado correctamente.')
             } else {
                 setLoading(false)
-                console.error('Error: ' + result.message);
+                console.error('Error: ' + result.message)
             }
             cleanForm()
         } else {
-            const numero = "+5491162964493" 
-            const texto = `Hola! Soy ${formState.nombre}.\n\nDireccion de correo: ${formState.email}\n${formState.mensaje}`
+            const numero = "+5491162964493"
+            const texto = `¡Hola! Soy ${formState.nombre}.\n\nDirección de correo: ${formState.email}\n${formState.mensaje}`
             window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank")
             cleanForm()
         }
@@ -81,13 +81,13 @@ export const Contact = () => {
 
     return (
         <div id="contact" className="h-fit w-full my-20 bg-zinc-100 py-20">
-            <h1 className="text-center font-extralight md:text-5xl text-4xl">Contactanos ahora</h1>
+            <h1 className="text-center font-extralight md:text-5xl text-4xl">Contáctanos ahora</h1>
 
             <section className="md:w-[30%] w-[85%] mx-auto mt-16">
                 <form className="flex flex-col gap-5">
                     <div>
                         <Input
-                            placeholder="Nombre Completo"
+                            placeholder="Nombre completo"
                             className="border-zinc-400"
                             value={formState.nombre}
                             onChange={(e) => setFormState({ ...formState, nombre: e.target.value })}
@@ -103,7 +103,7 @@ export const Contact = () => {
                     </div>
                     <div>
                         <Input
-                            placeholder="Email"
+                            placeholder="Correo electrónico"
                             className="border-zinc-400"
                             type="email"
                             value={formState.email}
@@ -112,7 +112,7 @@ export const Contact = () => {
                     </div>
                     <div>
                         <Textarea
-                            placeholder="Mensaje"
+                            placeholder="Mensaje..."
                             className="border-zinc-400"
                             value={formState.mensaje}
                             onChange={(e) => setFormState({ ...formState, mensaje: e.target.value })}
@@ -120,7 +120,7 @@ export const Contact = () => {
                     </div>
 
                     <p className="text-center mt-5 text-zinc-500">
-                        Una vez confirmado, nuestro equipo te contestará por el medio elegido.
+                        Una vez confirmado, nuestro equipo te contactará por el medio elegido.
                     </p>
 
                     <div className="flex items-center gap-7 justify-center md:mt-10 mt-7">
@@ -137,7 +137,7 @@ export const Contact = () => {
                             onClick={() => onSubmit(true)}
                             className="bg-gradient-to-r from-red-500 to-orange-500 w-[150px] flex justify-center border-2 border-red-500 text-white px-4 py-1 cursor-pointer rounded-full hover:scale-105 transition-all duration-200"
                         >
-                            {loading ? <ImSpinner3 size={20} className="animate-spin"/> : 'Enviar por mail'}
+                            {loading ? <ImSpinner3 size={20} className="animate-spin" /> : 'Enviar por mail'}
                         </button>
                     </div>
                 </form>
