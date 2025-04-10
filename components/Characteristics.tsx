@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import imagePlatform from '@/public/platformTest.png'
+import reportesSeguimiento from '@/public/reportes-seguimiento.png'
 import Image from "next/image";
 
 export const Characteristics = () => {
@@ -23,7 +24,8 @@ export const Characteristics = () => {
                         viewport={{ once: true }}
                     >
                         <div className={`flex ${index % 2 === 0 ? 'md:flex-row flex-col' : 'md:flex-row-reverse flex-col'} gap-10 md:mb-40 mb-24 items-center justify-around mt-10 md:w-[80%] w-[90%] mx-auto`}>
-                            <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:text-start' : 'md:text-end'}`}>
+                            <div className={`md:w-1/3 ${index % 2 === 0 ? 'md:text-start' : 'md:text-end'}`}>
+                                <p className="italic text-zinc-400">{item.previewTitle}</p>
                                 <h2 className="text-3xl font-extralight mb-5 text-zinc-700">{item.title}</h2>
                                 <p className="text-zinc-500">{item.description}</p>
                                 <div className={`mt-7 flex items-center md:justify-start justify-center ${index % 2 !== 0 && 'md:flex-row-reverse'} gap-2 cursor-pointer text-zinc-700 font-semibold`}>
@@ -31,11 +33,11 @@ export const Characteristics = () => {
                                     <FaArrowRightLong className={`${index % 2 !== 0 && 'md:rotate-180'}`} />
                                 </div>
                             </div>
-                            <div className="md:w-1/2">
+                            <div className="md:w-2/3">
                                 <Image
-                                    src={imagePlatform}
+                                    src={item.img}
                                     alt="Imagen de la plataforma"
-                                    className="rounded-lg shadow-lg"
+                                    className="rounded-md shadow-lg"
                                     width={800}
                                     height={500}
                                 />
@@ -51,28 +53,38 @@ export const Characteristics = () => {
 
 const info = [
     {
+        previewTitle: 'Pagina web',
         title: 'Sitio Web Institucional',
         description:
             'Una presencia digital profesional con información clave de la institución. Incluye páginas personalizadas, galería de fotos y videos, calendario de actividades, secciones de contacto con formularios y botón de WhatsApp, además de un área para descargar documentos importantes como inscripciones y reglamentos.',
+        img: imagePlatform
     },
     {
+        previewTitle: 'Autenticación y perfiles',
         title: 'Comunidad Educativa Digital',
         description:
             'Perfiles individuales para alumnos, docentes y familias que permiten una interacción personalizada dentro del sistema. Cada usuario accede con sus credenciales para consultar información relevante de forma segura.',
+        img: imagePlatform
     },
     {
+        previewTitle: 'Canales de comunicación',
         title: 'Comunicación Interna',
         description:
             'Sistema integrado de notificaciones, foros y mensajes para mantener una comunicación fluida entre la institución, las familias y el alumnado. Ideal para circulares digitales, anuncios urgentes o debates pedagógicos.',
+        img: imagePlatform
     },
     {
+        previewTitle: 'Carga y descarga de archivos',
         title: 'Gestión de Documentación Online',
         description:
             'Digitalización del proceso de inscripción, carga de archivos y administración de documentos oficiales. Todo desde un panel organizado y accesible desde cualquier dispositivo.',
+        img: imagePlatform
     },
     {
+        previewTitle: 'Dashboard de Administrador',
         title: 'Reportes y Seguimiento Escolar',
         description:
             'Generación automática de informes académicos, reportes de asistencia y calificaciones. Las instituciones ahorran tiempo y ofrecen un seguimiento detallado y profesional a estudiantes y familias.',
+        img: reportesSeguimiento
     }
 ];
