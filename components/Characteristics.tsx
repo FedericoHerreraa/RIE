@@ -6,6 +6,7 @@ import imagePlatform from '@/public/platformTest.png'
 import reportesSeguimiento from '@/public/reportes-seguimiento.png'
 import cargaDescargaArchivos from '@/public/carga-des-archivos.png'
 import Image from "next/image";
+import { scrollToSection } from "@/utils/functions";
 
 export const Characteristics = () => {
     return (
@@ -29,7 +30,7 @@ export const Characteristics = () => {
                                 <p className="italic text-zinc-400">{item.previewTitle}</p>
                                 <h2 className="text-3xl font-extralight mb-5 text-zinc-700">{item.title}</h2>
                                 <p className="text-zinc-500">{item.description}</p>
-                                <div className={`mt-7 flex items-center md:justify-start justify-center ${index % 2 !== 0 && 'md:flex-row-reverse'} gap-2 cursor-pointer text-zinc-700 font-semibold`}>
+                                <div onClick={() => scrollToSection('contact')} className={`mt-7 flex items-center md:justify-start justify-center ${index % 2 !== 0 && 'md:flex-row-reverse'} gap-2 cursor-pointer text-zinc-700 font-semibold`}>
                                     <p className={`transition-all duration-200 ${index % 2 === 0 ? 'hover:mr-3' : 'hover:ml-3'}`}>Más información</p>
                                     <FaArrowRightLong className={`${index % 2 !== 0 && 'md:rotate-180'}`} />
                                 </div>
