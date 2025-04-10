@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import imagePlatform from '@/public/platformTest.png'
 import reportesSeguimiento from '@/public/reportes-seguimiento.png'
+import cargaDescargaArchivos from '@/public/carga-des-archivos.png'
 import Image from "next/image";
 
 export const Characteristics = () => {
@@ -78,7 +79,7 @@ const info = [
         title: 'Gestión de Documentación Online',
         description:
             'Digitalización del proceso de inscripción, carga de archivos y administración de documentos oficiales. Todo desde un panel organizado y accesible desde cualquier dispositivo.',
-        img: imagePlatform
+        img: cargaDescargaArchivos
     },
     {
         previewTitle: 'Dashboard de Administrador',
