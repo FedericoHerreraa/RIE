@@ -65,7 +65,7 @@ export const Contact = () => {
             const result = await response.json()
             if (response.ok) {
                 setLoading(false)
-                toast('E-mail enviado correctamente.')
+                toast('Mensaje enviado correctamente.')
             } else {
                 setLoading(false)
                 console.error('Error: ' + result.message)
