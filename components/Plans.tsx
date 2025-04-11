@@ -72,7 +72,7 @@ const plans = [
             'Mantenimiento web incluido',
         ],
         textColor: '',
-        footer: '🚀 Pago anual con descuento'
+        footer: '🚀 Pago anual con descuento del 20%'
     },
     {
         id: 2,
@@ -80,7 +80,7 @@ const plans = [
         name: 'Avanzado',
         description: 'Para instituciones que quieren digitalizar procesos administrativos y mejorar la comunicación.',
         monthlyPrice: 350000,
-        yearlyPrice: 3800000,
+        yearlyPrice: 3400000,
         features: [
             'TODO EL PLAN BASE +',
             'Perfiles para alumnos, docentes y familias',
@@ -89,6 +89,6 @@ const plans = [
             'Inscripción y gestión de documentos online'
         ],
         textColor: 'bg-gradient-to-r text-transparent bg-clip-text from-pink-400 via-blue-300 to-violet-400',
-        footer: '🚀 Pago mensual con opción de congelar precio por 12 meses'
+        footer: '🚀 Pago anual con descuento del 20%'
     }
 ]
