@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
-import imagePlatform from '@/public/platformTest.png'
 import reportesSeguimiento from '@/public/reportes-seguimiento.png'
 import cargaDescargaArchivos from '@/public/carga-des-archivos.png'
 import webInstitucional from '@/public/web-institucional.png'
 import blogImg from '@/public/blog.png'
+import authImg from '@/public/auth.png'
 import Image from "next/image";
 import { scrollToSection } from "@/utils/functions";
 
@@ -68,7 +68,7 @@ const info = [
         title: 'Comunidad Educativa Digital',
         description:
             'Perfiles individuales para alumnos, docentes y familias que permiten una interacción personalizada dentro del sistema. Cada usuario accede con sus credenciales para consultar información relevante de forma segura.',
-        img: imagePlatform
+        img: authImg
     },
     {
         previewTitle: 'Canales de comunicación',
