@@ -67,7 +67,7 @@ const plans = [
             'Contacto con formulario y WhatsApp',
             'Descarga de documentos (inscripciones, reglamentos, etc.)',
             'Panel de control para gestionar la web',
-            'Disponibilidad 24/7 para cualquier modificación en la plataforma',
+            'Disponibilidad para modificaciónes en la plataforma',
             'Hosting y dominio incluido',
             'Mantenimiento web incluido',
         ],
