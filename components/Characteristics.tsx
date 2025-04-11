@@ -5,6 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import imagePlatform from '@/public/platformTest.png'
 import reportesSeguimiento from '@/public/reportes-seguimiento.png'
 import cargaDescargaArchivos from '@/public/carga-des-archivos.png'
+import webInstitucional from '@/public/web-institucional.png'
 import Image from "next/image";
 import { scrollToSection } from "@/utils/functions";
 
@@ -59,7 +60,7 @@ const info = [
         title: 'Sitio Web Institucional',
         description:
             'Una presencia digital profesional con información clave de la institución. Incluye páginas personalizadas, galería de fotos y videos, calendario de actividades, secciones de contacto con formularios y botón de WhatsApp, además de un área para descargar documentos importantes como inscripciones y reglamentos.',
-        img: imagePlatform
+        img: webInstitucional
     },
     {
         previewTitle: 'Autenticación y perfiles',
