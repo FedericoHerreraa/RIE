@@ -6,6 +6,7 @@ import imagePlatform from '@/public/platformTest.png'
 import reportesSeguimiento from '@/public/reportes-seguimiento.png'
 import cargaDescargaArchivos from '@/public/carga-des-archivos.png'
 import webInstitucional from '@/public/web-institucional.png'
+import blogImg from '@/public/blog.png'
 import Image from "next/image";
 import { scrollToSection } from "@/utils/functions";
 
@@ -74,7 +75,7 @@ const info = [
         title: 'Comunicación Interna',
         description:
             'Sistema integrado de notificaciones, foros y mensajes para mantener una comunicación fluida entre la institución, las familias y el alumnado. Ideal para circulares digitales, anuncios urgentes o debates pedagógicos.',
-        img: imagePlatform
+        img: blogImg
     },
     {
         previewTitle: 'Carga y descarga de archivos',
