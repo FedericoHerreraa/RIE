@@ -129,7 +129,7 @@ export async function POST(req: NextRequest) {
         // Email sent to us
         await resend.emails.send({
             from: 'contactorie@asneedsolutions.com',
-            to: 'asneeed@gmail.com',
+            to: 'asneedsolutions@gmail.com',
             subject: 'Nueva consulta de RIE',
             html: emailUsMessage
         })
