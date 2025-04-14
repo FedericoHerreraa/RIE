@@ -42,6 +42,17 @@ export const Landing = () => {
                 <motion.section
                     initial={{ y: -100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                >    
+                    <p className="md:mb-5 mb-10 text-zinc-800 font-semibold md:text-left text-center">
+                        100% personalizada para tu institución educativa.
+                    </p>
+                </motion.section>
+
+                <motion.section
+                    initial={{ y: -120, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >        

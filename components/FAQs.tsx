@@ -38,7 +38,7 @@ const faqsContent = [
     },
     {
         question: "¿Puedo cambiar de plan más adelante?",
-        answer: "Sí, podés comenzar con el plan básico y migrar al plan intermedio en cualquier momento sin perder tu información.",
+        answer: "Sí, podés comenzar con el plan básico y migrar al plan avanzado en cualquier momento sin perder tu información.",
     },
     {
         question: "¿El sistema permite registrar usuarios como alumnos o docentes?",
@@ -46,7 +46,7 @@ const faqsContent = [
     },
     {
         question: "¿Puedo gestionar inscripciones y documentos desde la web?",
-        answer: "Claro. Desde el plan intermedio se habilita la carga y gestión online de documentos, así como el proceso de inscripción totalmente digital.",
+        answer: "Claro. Desde el plan avanzado se habilita la carga y gestión online de documentos, así como el proceso de inscripción totalmente digital.",
     },
     {
         question: "¿Puedo agregar alguna funcionalidad que no esté en los planes?",
