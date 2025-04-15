@@ -45,7 +45,7 @@ export const Landing = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >    
-                    <p className="md:mb-5 mb-10 text-zinc-800 font-semibold md:text-left text-center">
+                    <p className="md:mb-5 mb-10 md:mx-0 mx-10 text-zinc-800 font-semibold md:text-left text-center">
                         100% personalizada para tu institución educativa.
                     </p>
                 </motion.section>
