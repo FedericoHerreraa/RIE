@@ -33,8 +33,19 @@ export const Plans = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <p className="text-zinc-800 font-medium mt-6">${plan.monthlyPrice.toLocaleString("es-AR")}/mes – ${plan.yearlyPrice.toLocaleString("es-AR")}/año</p>
-                                    <p className="mt-4 font-semibold">{plan.footer}</p>
+                                    <div className="flex items-center gap-10">
+                                        <div className="mt-6">
+                                            <p className="text-zinc-800 font-medium">${plan.discountMonthlyPrice.toLocaleString("es-AR")}/mes</p>
+                                            <p className="text-zinc-500 text-xs line-through">${plan.monthlyPrice.toLocaleString("es-AR")}/mes</p>
+                                        </div>
+                                        <div className="mt-6">
+                                            <p className="text-zinc-800 font-medium">${plan.discountYearlyPrice.toLocaleString("es-AR")}/año</p>
+                                            <p className="text-zinc-500 text-xs line-through">${plan.yearlyPrice.toLocaleString("es-AR")}/año</p>
+                                        </div>                                        
+                                    </div>
+
+                                    <p className="mt-3 font-extralight">Descuento por los primeros 3 meses</p>
+                                    <p className="mt-3 font-semibold">{plan.footer}</p>
                                 </div>
                             </TabsContent>
                         ))}
@@ -58,8 +69,10 @@ const plans = [
         value: 'base',
         name: 'Base',
         description: 'Ideal para colegios que solo necesitan una presencia digital profesional.',
+        discountMonthlyPrice: 100000,
         monthlyPrice: 150000,
-        yearlyPrice: 1500000,
+        discountYearlyPrice: 1450000,
+        yearlyPrice: 1600000,
         features: [
             'Página web con información de la institución',
             'Galería de imágenes y videos',
@@ -72,15 +85,17 @@ const plans = [
             'Mantenimiento web incluido',
         ],
         textColor: '',
-        footer: '🚀 Pago anual con descuento del 20%'
+        footer: '🚀 Pago anual con descuento del 10%'
     },
     {
         id: 2,
         value: 'advanced',
         name: 'Avanzado',
         description: 'Para instituciones que quieren digitalizar procesos administrativos y mejorar la comunicación.',
+        discountMonthlyPrice: 300000,
         monthlyPrice: 350000,
-        yearlyPrice: 3400000,
+        discountYearlyPrice: 3600000,
+        yearlyPrice: 3750000,
         features: [
             'TODO EL PLAN BASE +',
             'Perfiles para alumnos, docentes y familias',
@@ -89,6 +104,6 @@ const plans = [
             'Inscripción y gestión de documentos online'
         ],
         textColor: 'bg-gradient-to-r text-transparent bg-clip-text from-pink-400 via-blue-300 to-violet-400',
-        footer: '🚀 Pago anual con descuento del 20%'
+        footer: '🚀 Pago anual con descuento del 10%'
     }
 ]
