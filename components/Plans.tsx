@@ -29,7 +29,7 @@ export const Plans = () => {
                                         {plan.features.map((feature, index) => (
                                             <div key={index} className="flex items-start gap-3">
                                                 <CiCircleCheck className="text-green-500 min-w-[20px] min-h-[20px]" />
-                                                <p className="text-base leading-snug">{feature}</p>
+                                                <p className={`text-base ${plan.value === 'advanced' && index === 0 ? 'font-bold' : ''}`}>{feature}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -97,7 +97,7 @@ const plans = [
         discountYearlyPrice: 3600000,
         yearlyPrice: 3750000,
         features: [
-            'TODO EL PLAN BASE +',
+            'Todo el plan base +',
             'Perfiles para alumnos, docentes y familias',
             'Sistema de comunicación interna (notificaciones y blog)',
             'Generación de reportes (asistencia y calificaciones)',
