@@ -8,6 +8,7 @@ import { KnowUs } from "@/components/KnowUs";
 import { FAQs } from "@/components/FAQs";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
+import { Discount } from "@/components/Discount";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Header />
         <Landing />
       </div>
+      <Discount />
       <Characteristics />
       <KnowUs />
       <Plans />

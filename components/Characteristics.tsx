@@ -14,7 +14,7 @@ export const Characteristics = () => {
     return (
         <section id="proposal" className="py-20 text-center min-h-[100vh] bg-zinc-100">
             <div className="mb-40">
-                <h1 className="md:text-5xl text-4xl font-extralight mb-5 text-zinc-700">Descubrí nuestras funcionalidades</h1>
+                <h1 className="md:text-5xl text-4xl font-extralight mb-5 text-zinc-700">Organización, gestión y control en un solo lugar</h1>
                 <p className="text-zinc-500 md:text-lg mx-10">Tu institución será completamente distinta con <span className="font-bold bg-gradient-to-r text-transparent bg-clip-text from-pink-400 to-violet-400">RIE</span></p>
             </div>
 
@@ -57,6 +57,27 @@ export const Characteristics = () => {
 
 const info = [
     {
+        previewTitle: 'Dashboard de Administrador',
+        title: 'Reportes y Seguimiento Escolar',
+        description:
+            'Generación automática de informes académicos, reportes de asistencia y calificaciones. Las instituciones ahorran tiempo y ofrecen un seguimiento detallado y profesional a estudiantes y familias.',
+        img: reportesSeguimiento
+    },
+    {
+        previewTitle: 'Carga y descarga de archivos',
+        title: 'Gestión de Documentación Online',
+        description:
+            'Digitalización del proceso de inscripción, carga de archivos y administración de documentos oficiales. Todo desde un panel organizado y accesible desde cualquier dispositivo.',
+        img: cargaDescargaArchivos
+    },
+    {
+        previewTitle: 'Canales de comunicación',
+        title: 'Comunicación Interna',
+        description:
+            'Sistema integrado de notificaciones, foros y mensajes para mantener una comunicación fluida entre la institución, las familias y el alumnado. Ideal para circulares digitales, anuncios urgentes o debates pedagógicos.',
+        img: blogImg
+    },
+    {
         previewTitle: 'Pagina web',
         title: 'Sitio Web Institucional',
         description:
@@ -70,25 +91,4 @@ const info = [
             'Perfiles individuales para alumnos, docentes y familias que permiten una interacción personalizada dentro del sistema. Cada usuario accede con sus credenciales para consultar información relevante de forma segura.',
         img: authImg
     },
-    {
-        previewTitle: 'Canales de comunicación',
-        title: 'Comunicación Interna',
-        description:
-            'Sistema integrado de notificaciones, foros y mensajes para mantener una comunicación fluida entre la institución, las familias y el alumnado. Ideal para circulares digitales, anuncios urgentes o debates pedagógicos.',
-        img: blogImg
-    },
-    {
-        previewTitle: 'Carga y descarga de archivos',
-        title: 'Gestión de Documentación Online',
-        description:
-            'Digitalización del proceso de inscripción, carga de archivos y administración de documentos oficiales. Todo desde un panel organizado y accesible desde cualquier dispositivo.',
-        img: cargaDescargaArchivos
-    },
-    {
-        previewTitle: 'Dashboard de Administrador',
-        title: 'Reportes y Seguimiento Escolar',
-        description:
-            'Generación automática de informes académicos, reportes de asistencia y calificaciones. Las instituciones ahorran tiempo y ofrecen un seguimiento detallado y profesional a estudiantes y familias.',
-        img: reportesSeguimiento
-    }
 ];
