@@ -98,10 +98,15 @@ const plans = [
         yearlyPrice: 3750000,
         features: [
             'Todo el plan base +',
-            'Perfiles para alumnos, docentes y familias',
-            'Sistema de comunicación interna (notificaciones y blog)',
-            'Generación de reportes (asistencia y calificaciones)',
-            'Inscripción y gestión de documentos online'
+            'Perfiles personalizados para docentes y directivos',
+            'Panel de control institucional para gestionar la web, usuarios y contenidos',
+            'Sistema de comunicación interna (notificaciones, circulares y blog)',
+            'Generación automática de reportes (asistencia, calificaciones, matrícula)',
+            'Tablas y paneles con estadísticas sobre asistencia y desempeño',
+            'Gestión documental avanzada',
+            'Módulo de inscripciones online con seguimiento del estado y validación automática',
+            'Calendario institucional integrado con eventos, reuniones y vencimientos',
+            'Sistema de encuestas internas y formularios de retroalimentación',
         ],
         textColor: 'bg-gradient-to-r text-transparent bg-clip-text from-pink-400 via-blue-300 to-violet-400',
         footer: '🚀 Pago anual con descuento del 10%'
