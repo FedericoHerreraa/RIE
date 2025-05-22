@@ -93,7 +93,7 @@ function generateMessage(
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json();
-        const { nombre, email, asunto, mensaje } = body
+        const { nombre, asunto, email, mensaje } = body
 
         if (!nombre || !email || !asunto || !mensaje) {
             return NextResponse.json({
